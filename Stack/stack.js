@@ -22,8 +22,8 @@ showData();
 
 
 document.getElementById('push').addEventListener('click', push);
-document.getElementById('pop').addEventListener('click', push);
-document.getElementById('pick').addEventListener('click', pick);
+document.getElementById('pop').addEventListener('click', pop);
+document.getElementById('peek').addEventListener('click', peek);
 
 function push() {
     let input = document.getElementById('push_input').value
@@ -34,16 +34,18 @@ function push() {
 
 // pop function 
 function pop(){
-    let input = document.getElementById('push_input').value
-    array.pop(input);
-    console.log(array)
+    let poppedElement = array.pop();
+    console.log(poppedElement);
     showData();
 }
 
 // pop function 
-function pick(){
-    let input = document.getElementById('push_input').value
-    let picking = array.peek(input);
-    console.log(picking)
-    showData();
-}
+// function peek(){
+//     let topElement = peek(array);
+//     console.log(topElement)
+//     showData();
+// }
+
+const myStack = [1, 2, 3, 4];
+const topElement = peek(myStack);
+console.log("Top element:", topElement);
